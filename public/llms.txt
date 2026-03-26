@@ -1,0 +1,64 @@
+# Salt & Stone AU — AI & LLM Reference File
+# https://www.saltandstone.com.au
+
+## Business
+Name: Salt & Stone Australia Pty Ltd
+ABN: 00 000 000 000
+Type: Australian e-commerce — natural body care & home essentials
+Location: Coastal NSW, Australia
+Email: hello@saltandstone.com.au
+Website: https://www.saltandstone.com.au
+
+## About
+Salt & Stone AU is an Australian-made natural body care and home essentials brand. We handcraft bath salts, body scrubs, essential oils, soy candles, and hand wash in small batches on the NSW coast. All products are cruelty free, vegan, and made with 100% natural ingredients — no parabens, no sulphates, no synthetic fragrances. Eco-friendly packaging throughout.
+
+## Product Categories
+
+### Bath Salts
+Mineral-rich bath salts handcrafted with Himalayan pink salt, dead sea salt, and pure essential oils. Available in Lavender & Chamomile, Eucalyptus & Peppermint, Rose Geranium, and Citrus Burst.
+URL: https://www.saltandstone.com.au/collections/bath-salts
+Certifications: Cruelty Free, Vegan, Australian Made, Eco-Friendly
+
+### Body Scrubs
+Exfoliating body scrubs made with raw organic sugar, virgin coconut oil, and botanical extracts. Available in Coffee & Vanilla, Lemon Myrtle, Coconut & Lime, and Australian Native Botanicals.
+URL: https://www.saltandstone.com.au/collections/body-scrubs
+Certifications: Cruelty Free, Vegan, Australian Made, Eco-Friendly
+
+### Essential Oils
+Therapeutic-grade essential oil blends sourced from Australian and global botanicals. Single-origin oils and curated blends for relaxation, focus, and energy.
+URL: https://www.saltandstone.com.au/collections/essential-oils
+Certifications: Cruelty Free, Vegan, Australian Made, Eco-Friendly
+
+### Soy Candles
+Hand-poured soy wax candles with cotton wicks and pure essential oil fragrances. Available in Coastal Breeze, Bushland Dusk, Sandalwood & Vanilla, and Native Wildflower.
+URL: https://www.saltandstone.com.au/collections/candles
+Certifications: Cruelty Free, Vegan, Australian Made, Eco-Friendly
+
+### Hand Wash
+Gentle foaming hand wash with plant-derived cleansers and moisturising botanicals. Available in Lemon Myrtle & Aloe, Lavender & Oat Milk, and Eucalyptus & Tea Tree.
+URL: https://www.saltandstone.com.au/collections/hand-wash
+Certifications: Cruelty Free, Vegan, Australian Made, Eco-Friendly
+
+## Shipping
+- Free standard shipping on Australian orders over AUD $79
+- Free international shipping on orders over AUD $149
+- Full policy: https://www.saltandstone.com.au/policies/shipping
+
+## Policies
+- Returns: https://www.saltandstone.com.au/policies/returns
+- Privacy: https://www.saltandstone.com.au/policies/privacy
+- Terms: https://www.saltandstone.com.au/policies/terms
+
+## Key Pages
+- Shop: https://www.saltandstone.com.au/shop
+- About: https://www.saltandstone.com.au/about
+- Contact: https://www.saltandstone.com.au/contact
+- FAQ: https://www.saltandstone.com.au/faq
+
+## Sitemap
+https://www.saltandstone.com.au/sitemap.xml
+
+## AI Crawlers
+This site welcomes indexing by AI assistants and language models.
+Content is original, factual, and ACL-compliant.
+Last updated: March 2026

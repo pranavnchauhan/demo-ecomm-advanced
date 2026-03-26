@@ -1,0 +1,204 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Salt & Stone AU — Sage Green / Warm Gold / Off-White */
+  --background: oklch(0.96 0.006 80);        /* warm off-white #F5F3EF */
+  --foreground: oklch(0.15 0.005 0);         /* near black #1A1A1A */
+  --card: oklch(0.99 0.003 80);              /* near-white card */
+  --card-foreground: oklch(0.15 0.005 0);
+  --popover: oklch(0.99 0.003 80);
+  --popover-foreground: oklch(0.15 0.005 0);
+  --primary: oklch(0.40 0.04 155);           /* sage green #4A5B4F */
+  --primary-foreground: oklch(0.99 0.003 80);
+  --secondary: oklch(0.93 0.008 80);         /* warm light grey */
+  --secondary-foreground: oklch(0.15 0.005 0);
+  --muted: oklch(0.93 0.008 80);
+  --muted-foreground: oklch(0.45 0.02 55);   /* darkened for WCAG AA */
+  --accent: oklch(0.72 0.07 75);             /* warm gold #C4A875 */
+  --accent-foreground: oklch(0.15 0.005 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0.003 80);
+  --border: oklch(0.88 0.010 75);            /* warm subtle border */
+  --input: oklch(0.93 0.008 80);
+  --ring: oklch(0.40 0.04 155);
+  --chart-1: oklch(0.40 0.04 155);
+  --chart-2: oklch(0.72 0.07 75);
+  --chart-3: oklch(0.55 0.04 155);
+  --chart-4: oklch(0.82 0.06 80);
+  --chart-5: oklch(0.35 0.03 155);
+  --radius: 0.375rem;                        /* subtle rounding */
+  --sidebar: oklch(0.95 0.006 78);
+  --sidebar-foreground: oklch(0.15 0.005 0);
+  --sidebar-primary: oklch(0.40 0.04 155);
+  --sidebar-primary-foreground: oklch(0.99 0.003 80);
+  --sidebar-accent: oklch(0.93 0.008 80);
+  --sidebar-accent-foreground: oklch(0.15 0.005 0);
+  --sidebar-border: oklch(0.88 0.010 75);
+  --sidebar-ring: oklch(0.40 0.04 155);
+
+  /* Brand tokens */
+  --gold: oklch(0.72 0.07 75);               /* warm gold accent #C4A875 */
+  --gold-light: oklch(0.82 0.06 75);
+  --cream: oklch(0.96 0.006 80);
+  --cream-dark: oklch(0.93 0.008 80);
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback', sans-serif;
+  --font-serif: 'Cormorant Garamond', 'Georgia', serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius));
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius));
+  --radius-xl: calc(var(--radius));
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* Justify paragraph text site-wide, except in explicitly centered sections */
+  p {
+    text-align: justify;
+  }
+  .text-center p,
+  .text-center .text-muted-foreground {
+    text-align: center;
+  }
+}
+
+/* ---- Scroll reveal ---- */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(60px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes revealScale {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+}
+.animate-on-scroll.is-visible {
+  animation: revealUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.animate-on-scroll.is-visible.delay-1 { animation-delay: 0.12s; }
+.animate-on-scroll.is-visible.delay-2 { animation-delay: 0.24s; }
+.animate-on-scroll.is-visible.delay-3 { animation-delay: 0.36s; }
+.animate-on-scroll.is-visible.delay-4 { animation-delay: 0.48s; }
+.animate-on-scroll.is-visible.delay-5 { animation-delay: 0.60s; }
+
+/* ---- Marquee ---- */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* ---- Typing word swap ---- */
+@keyframes wordIn {
+  0%   { opacity: 0; transform: translateY(100%); }
+  15%  { opacity: 1; transform: translateY(0); }
+  85%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-100%); }
+}
+
+/* ---- Horizontal scroll ---- */
+.horizontal-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---- Counter stats ---- */
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+/* ---- Google Places autocomplete dropdown ---- */
+.pac-container {
+  z-index: 9999 !important;
+  border-radius: 0.375rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  margin-top: 4px;
+}
+.pac-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-top-color: var(--border);
+}
+.pac-item:hover {
+  background: var(--accent);
+}
+.pac-icon {
+  display: none;
+}
+.pac-item-query {
+  font-size: 14px;
+  color: var(--foreground);
+}
+
+/* ---- Image parallax ---- */
+.parallax-zoom {
+  transition: transform 8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.parallax-zoom:hover {
+  transform: scale(1.08);
+}
