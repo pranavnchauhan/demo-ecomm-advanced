@@ -151,24 +151,23 @@ export interface BrandConfig {
 
 export const brand: BrandConfig = {
   // ── Identity ──────────────────────────────────────────────────────────
-  name: "Salt & Stone AU",
-  legalName: "Salt & Stone Australia Pty Ltd",
-  tagline: "Nature. Refined.",
-  domain: "saltandstone.com.au",
-  supportEmail: "hello@saltandstone.com.au",
+  name: "Terra Bloom",
+  legalName: "Terra Bloom Pty Ltd",
+  tagline: "Grow your space.",
+  domain: "terrabloom.com.au",
+  supportEmail: "hello@terrabloom.com.au",
   abn: "00 000 000 000", // placeholder — update when ABN is registered
 
   // ── Visual ────────────────────────────────────────────────────────────
-  // Tip: use https://coolors.co to generate a palette, then drop values here.
   colors: {
-    primary: "#4A5B4F",     // sage green — nav, buttons, headings
-    accent: "#C4A875",      // warm gold — highlights, hover states, badges
-    background: "#F5F3EF",  // warm off-white — page background
-    foreground: "#1A1A1A",  // near black — body text
-    muted: "#8B8B8B",       // grey — secondary text, borders
+    primary: "#2D6A4F",     // deep green — nav, buttons, headings
+    accent: "#95D5B2",      // light mint green — highlights, hover states, badges
+    background: "#FAFDF7",  // very light green-white — page background
+    foreground: "#1B1B1B",  // near black — body text
+    muted: "#7C8B7E",       // muted green-grey — secondary text, borders
   },
   fonts: {
-    heading: "Cormorant Garamond", // elegant serif — import via next/font/google
+    heading: "DM Serif Display", // elegant serif — import via next/font/google
     body: "system-ui, sans-serif", // fast system font stack for body copy
   },
   logo: {
@@ -182,153 +181,146 @@ export const brand: BrandConfig = {
   // The homepage hero cycles through these "Drop X / Keep Y" pairs.
   hero: {
     rollingText: [
-      { drop: "Chemicals", keep: "Clean" },
-      { drop: "Synthetic", keep: "Natural" },
-      { drop: "Harsh", keep: "Gentle" },
-      { drop: "Artificial", keep: "Pure" },
+      { drop: "Plastic", keep: "Fiber" },
+      { drop: "Boring", keep: "Beautiful" },
+      { drop: "Fragile", keep: "Durable" },
+      { drop: "Indoor Only", keep: "Everywhere" },
     ],
     subtitle:
-      "Handcrafted natural body care and home essentials. Australian made, never tested on animals.",
-    ctaPrimary: { text: "Shop Now", href: "/shop" },
+      "Premium fiber planters for indoor & outdoor living. Lightweight, weather-resistant, UV-protected. Designed in Australia.",
+    ctaPrimary: { text: "Shop Planters", href: "/shop" },
     ctaSecondary: { text: "Our Story", href: "/about" },
   },
 
   // ── Collections ───────────────────────────────────────────────────────
   // Each handle must match the Shopify collection handle exactly.
-  // Add or remove collections here — the nav, sitemap, and collection pages
-  // all read from this array.
   collections: [
     {
-      handle: "bath-salts",
-      title: "Bath Salts",
-      tagline: "Drop The Chemicals. Keep The Clean.",
+      handle: "indoor-pots",
+      title: "Indoor Pots",
+      tagline: "Bring life to every room.",
       description:
-        "Mineral-rich bath salts handcrafted with Himalayan pink salt, dead sea salt, and pure essential oils. Soak away the day, naturally.",
-      image: "/images/collections/bath-salts.jpg",
+        "Contemporary indoor planters crafted from premium fiber material. Lightweight yet durable, perfect for living rooms, offices, and bedrooms.",
+      image: "/images/collections/indoor-pots.jpg",
     },
     {
-      handle: "body-scrubs",
-      title: "Body Scrubs",
-      tagline: "Drop The Synthetic. Keep The Natural.",
+      handle: "outdoor-planters",
+      title: "Outdoor Planters",
+      tagline: "Built for the elements.",
       description:
-        "Exfoliating body scrubs made with raw sugar, coconut oil, and botanical extracts. Smooth skin without the nasties.",
-      image: "/images/collections/body-scrubs.jpg",
+        "Weather-resistant outdoor planters with UV protection. From patios to gardens, these planters handle sun, rain, and frost with style.",
+      image: "/images/collections/outdoor-planters.jpg",
     },
     {
-      handle: "essential-oils",
-      title: "Essential Oils",
-      tagline: "Drop The Harsh. Keep The Gentle.",
+      handle: "hanging-pots",
+      title: "Hanging Pots",
+      tagline: "Elevate your greenery.",
       description:
-        "Therapeutic-grade essential oil blends sourced from Australian and global botanicals. For diffusing, bathing, and everyday wellness.",
-      image: "/images/collections/essential-oils.jpg",
+        "Space-saving hanging planters in modern designs. Perfect for balconies, verandahs, and small spaces.",
+      image: "/images/collections/hanging-pots.jpg",
     },
     {
-      handle: "candles",
-      title: "Soy Candles",
-      tagline: "Drop The Artificial. Keep The Pure.",
+      handle: "tabletop",
+      title: "Tabletop",
+      tagline: "Small pots, big impact.",
       description:
-        "Hand-poured soy wax candles with cotton wicks and essential oil fragrances. Clean burn, no toxins, beautiful scent throw.",
-      image: "/images/collections/candles.jpg",
+        "Compact planters for desks, windowsills, and dining tables. Succulents, herbs, and small plants never looked better.",
+      image: "/images/collections/tabletop.jpg",
     },
     {
-      handle: "hand-wash",
-      title: "Hand Wash",
-      tagline: "Drop The Irritants. Keep The Care.",
+      handle: "large-planters",
+      title: "Large Planters",
+      tagline: "Make a statement.",
       description:
-        "Gentle foaming hand wash with plant-derived cleansers and moisturising botanicals. Kind to sensitive skin.",
-      image: "/images/collections/hand-wash.jpg",
+        "Floor-standing planters for feature plants, trees, and large arrangements. The centrepiece your space deserves.",
+      image: "/images/collections/large-planters.jpg",
     },
   ],
 
   // ── Trust Bar ─────────────────────────────────────────────────────────
-  // These rotate in a horizontal marquee across the page.
   trustBar: [
-    "Australian Made & Owned",
-    "100% Natural Ingredients",
-    "Cruelty Free",
-    "Vegan Friendly",
-    "No Parabens",
-    "No Sulphates",
-    "Eco-Friendly Packaging",
-    "Handcrafted in Small Batches",
+    "Premium Fiber Material",
+    "UV Protected",
+    "Weather Resistant",
+    "Lightweight & Durable",
+    "Eco-Friendly",
+    "Recyclable",
+    "7-Day Delivery",
+    "Quality Guaranteed",
   ],
 
   // ── Social ────────────────────────────────────────────────────────────
-  // Only include platforms the brand actively uses. Remove unused ones.
   social: {
-    instagram: "https://instagram.com/saltandstone.au",
-    facebook: "https://facebook.com/saltstoneau",
-    tiktok: "https://tiktok.com/@saltandstone.au",
-    pinterest: "https://pinterest.com/saltstoneau",
+    instagram: "https://instagram.com/terrabloom.au",
+    facebook: "https://facebook.com/terrabloom",
+    pinterest: "https://pinterest.com/terrabloom",
   },
 
   // ── Shipping ──────────────────────────────────────────────────────────
   shipping: {
-    freeThresholdDomestic: 79,        // free shipping over $79 AUD within Australia
-    freeThresholdInternational: 149,   // free shipping over $149 AUD internationally
+    freeThresholdDomestic: 99,        // free shipping over $99 AUD within Australia
+    freeThresholdInternational: 199,   // free shipping over $199 AUD internationally
     currency: "AUD",
   },
 
   // ── SEO ───────────────────────────────────────────────────────────────
   seo: {
-    titleTemplate: "%s | Salt & Stone AU",
-    defaultTitle: "Salt & Stone AU | Nature. Refined.",
+    titleTemplate: "%s | Terra Bloom",
+    defaultTitle: "Terra Bloom | Premium Fiber Planters",
     defaultDescription:
-      "Handcrafted natural body care and home essentials. Australian made with pure ingredients. Bath salts, body scrubs, essential oils, and soy candles.",
+      "Premium fiber planters for indoor and outdoor living. Lightweight, weather-resistant, UV-protected. Designed in Australia, delivered to your door.",
     keywords: [
-      "natural body care",
-      "australian made",
-      "bath salts",
-      "body scrub",
-      "essential oils",
-      "soy candles",
-      "cruelty free",
-      "vegan skincare",
-      "natural hand wash",
-      "eco friendly body care",
+      "planters",
+      "fiber pots",
+      "indoor plants",
+      "outdoor planters",
+      "plant pots",
+      "garden pots",
+      "australian planters",
+      "modern planters",
+      "lightweight pots",
+      "UV protected planters",
     ],
   },
 
   // ── Certifications ────────────────────────────────────────────────────
-  // Shown as badges on the homepage trust section and product pages.
   certifications: [
-    "Cruelty Free",
-    "Vegan",
-    "Australian Made",
+    "UV Protected",
+    "Weather Resistant",
     "Eco-Friendly",
+    "Quality Guaranteed",
   ],
 
   // ── Testimonials ──────────────────────────────────────────────────────
-  // Customer reviews displayed on the homepage and optionally on product pages.
   testimonials: [
     {
-      name: "Sarah M.",
+      name: "Priya S.",
       location: "Sydney",
-      text: "The lavender bath salts are incredible. My skin has never felt softer.",
+      text: "The Apple Shape Pot is stunning. So much lighter than ceramic but looks just as premium. My monstera loves it.",
       rating: 5,
     },
     {
-      name: "James K.",
+      name: "Raj K.",
       location: "Melbourne",
-      text: "Finally found a body scrub that actually uses natural ingredients. Love it.",
+      text: "Ordered 4 outdoor planters for our patio. Survived a Melbourne winter with zero damage. Highly recommend.",
       rating: 5,
     },
     {
-      name: "Emily R.",
+      name: "Sarah L.",
       location: "Brisbane",
-      text: "The soy candles burn beautifully and the scents are divine. Will be ordering more.",
+      text: "The tabletop pots are perfect for my herb garden. Clean design, great quality, and they arrived in 5 days.",
       rating: 5,
     },
     {
-      name: "Olivia T.",
+      name: "Michael T.",
       location: "Perth",
-      text: "The hand wash smells amazing and doesn't dry out my hands. Switched the whole house over.",
+      text: "We renovated our office courtyard with Terra Bloom large planters. The team couldn't believe they're not stone.",
       rating: 5,
     },
     {
-      name: "Daniel W.",
+      name: "Anita D.",
       location: "Adelaide",
-      text: "Bought the essential oil blend for my diffuser — the quality is next level. So much better than supermarket brands.",
+      text: "Love that these are recyclable. Finally a planter brand that cares about sustainability. Beautiful products too.",
       rating: 5,
     },
   ],

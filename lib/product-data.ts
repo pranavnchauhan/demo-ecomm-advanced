@@ -1,7 +1,7 @@
 import type { Product } from "@/lib/shopify/types"
 
 /**
- * Static product data for Salt & Stone AU demo.
+ * Static product data for Terra Bloom demo.
  * Used as fallback when no Shopify store is connected.
  */
 
@@ -11,7 +11,7 @@ function makeImages(imagePath: string, productName: string) {
       {
         node: {
           url: imagePath,
-          altText: `${productName} - Salt & Stone AU`,
+          altText: `${productName} - Terra Bloom`,
         },
       },
     ],
@@ -20,246 +20,507 @@ function makeImages(imagePath: string, productName: string) {
 
 export const staticProducts: Product[] = [
   {
-    id: "static-himalayan-pink-bath-salts",
-    title: "Himalayan Pink Bath Salts - 500g",
+    id: "static-apple-shape-pot",
+    title: "Apple Shape Pot",
     description:
-      "Mineral-rich Himalayan pink salt harvested from ancient sea deposits. Infused with lavender and chamomile essential oils for a deeply calming bath experience. Contains over 80 trace minerals to nourish and detoxify skin. Handcrafted in Australia.",
+      "A beautifully rounded fiber planter inspired by the classic apple silhouette. Lightweight yet sturdy, perfect for medium houseplants like monsteras and peace lilies. Available in multiple colours and sizes to suit any interior.",
     descriptionHtml:
-      "<p>Mineral-rich <strong>Himalayan pink salt</strong> harvested from ancient sea deposits.</p><ul><li>Infused with lavender and chamomile essential oils</li><li>Over 80 trace minerals for skin health</li><li>500g resealable kraft pouch</li><li>Handcrafted in small batches in Australia</li><li>No parabens, no sulphates, no synthetics</li></ul>",
-    handle: "himalayan-pink-bath-salts-500g",
+      "<p>A beautifully rounded <strong>fiber planter</strong> inspired by the classic apple silhouette.</p><ul><li>Premium fiber material — lightweight yet sturdy</li><li>Perfect for medium houseplants</li><li>UV-protected finish</li><li>Available in Small and Medium</li><li>Drainage hole included</li></ul>",
+    handle: "apple-shape-pot",
     availableForSale: true,
-    productType: "Bath Salts",
-    options: [{ id: "opt-1", name: "Title", values: ["Default Title"] }],
-    images: makeImages("/images/collections/bath-salts.jpg", "Himalayan Pink Bath Salts"),
-    priceRange: { minVariantPrice: { amount: "34.95", currencyCode: "AUD" } },
+    productType: "Indoor Pots",
+    options: [
+      { id: "opt-1a", name: "Color", values: ["White", "Grey", "Charcoal", "Natural"] },
+      { id: "opt-1b", name: "Size", values: ["Small", "Medium"] },
+    ],
+    images: makeImages("/images/products/apple-shape-pot.jpg", "Apple Shape Pot"),
+    priceRange: { minVariantPrice: { amount: "89.00", currencyCode: "AUD" } },
     compareAtPriceRange: { minVariantPrice: { amount: "0", currencyCode: "AUD" } },
     variants: [
       {
-        id: "var-himalayan-pink-1",
-        title: "Default Title",
+        id: "var-apple-white-sm",
+        title: "White / Small",
         availableForSale: true,
-        selectedOptions: [{ name: "Title", value: "Default Title" }],
-        price: { amount: "34.95", currencyCode: "AUD" },
+        selectedOptions: [
+          { name: "Color", value: "White" },
+          { name: "Size", value: "Small" },
+        ],
+        price: { amount: "89.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-apple-white-md",
+        title: "White / Medium",
+        availableForSale: true,
+        selectedOptions: [
+          { name: "Color", value: "White" },
+          { name: "Size", value: "Medium" },
+        ],
+        price: { amount: "109.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-apple-grey-sm",
+        title: "Grey / Small",
+        availableForSale: true,
+        selectedOptions: [
+          { name: "Color", value: "Grey" },
+          { name: "Size", value: "Small" },
+        ],
+        price: { amount: "89.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-apple-charcoal-sm",
+        title: "Charcoal / Small",
+        availableForSale: true,
+        selectedOptions: [
+          { name: "Color", value: "Charcoal" },
+          { name: "Size", value: "Small" },
+        ],
+        price: { amount: "89.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-apple-natural-sm",
+        title: "Natural / Small",
+        availableForSale: true,
+        selectedOptions: [
+          { name: "Color", value: "Natural" },
+          { name: "Size", value: "Small" },
+        ],
+        price: { amount: "89.00", currencyCode: "AUD" },
       },
     ],
   },
   {
-    id: "static-dead-sea-mineral-bath-salts",
-    title: "Dead Sea Mineral Bath Salts - 500g",
+    id: "static-ball-shape-pot",
+    title: "Ball Shape Pot",
     description:
-      "Authentic Dead Sea salt crystals rich in magnesium, potassium, and calcium. Blended with eucalyptus and peppermint essential oils to soothe tired muscles and promote recovery. Australian made.",
+      "A perfectly spherical fiber planter that works indoors and outdoors. The smooth, minimalist form complements any decor style. Weather-resistant and UV-protected for year-round use.",
     descriptionHtml:
-      "<p>Authentic <strong>Dead Sea salt crystals</strong> rich in magnesium, potassium, and calcium.</p><ul><li>Blended with eucalyptus and peppermint essential oils</li><li>Soothes tired muscles and promotes recovery</li><li>500g resealable kraft pouch</li><li>Australian made with pure ingredients</li></ul>",
-    handle: "dead-sea-mineral-bath-salts-500g",
+      "<p>A perfectly spherical <strong>fiber planter</strong> that works indoors and outdoors.</p><ul><li>Smooth minimalist design</li><li>Weather-resistant and UV-protected</li><li>Suitable for indoor and outdoor use</li><li>Drainage hole included</li><li>Lightweight fiber construction</li></ul>",
+    handle: "ball-shape-pot",
     availableForSale: true,
-    productType: "Bath Salts",
-    options: [{ id: "opt-2", name: "Title", values: ["Default Title"] }],
-    images: makeImages("/images/collections/bath-salts.jpg", "Dead Sea Mineral Bath Salts"),
-    priceRange: { minVariantPrice: { amount: "39.95", currencyCode: "AUD" } },
+    productType: "Indoor Pots",
+    options: [
+      { id: "opt-2a", name: "Color", values: ["White", "Charcoal", "Black"] },
+    ],
+    images: makeImages("/images/products/ball-shape-pot.jpg", "Ball Shape Pot"),
+    priceRange: { minVariantPrice: { amount: "79.00", currencyCode: "AUD" } },
     compareAtPriceRange: { minVariantPrice: { amount: "0", currencyCode: "AUD" } },
     variants: [
       {
-        id: "var-dead-sea-1",
-        title: "Default Title",
+        id: "var-ball-white",
+        title: "White",
         availableForSale: true,
-        selectedOptions: [{ name: "Title", value: "Default Title" }],
-        price: { amount: "39.95", currencyCode: "AUD" },
+        selectedOptions: [{ name: "Color", value: "White" }],
+        price: { amount: "79.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-ball-charcoal",
+        title: "Charcoal",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Charcoal" }],
+        price: { amount: "79.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-ball-black",
+        title: "Black",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Black" }],
+        price: { amount: "79.00", currencyCode: "AUD" },
       },
     ],
   },
   {
-    id: "static-coconut-coffee-body-scrub",
-    title: "Coconut & Coffee Body Scrub - 250g",
+    id: "static-bowl-shape-fiber-pot",
+    title: "Bowl Shape Fiber Pot",
     description:
-      "Energising body scrub combining finely ground Arabica coffee with virgin coconut oil and raw sugar. Exfoliates dead skin cells, boosts circulation, and leaves skin silky smooth. No parabens, no sulphates.",
+      "A low-profile round fiber pot ideal for tabletop displays. Perfect for succulents, small herbs, and decorative arrangements. Clean lines and a natural feel make it a versatile addition to any surface.",
     descriptionHtml:
-      "<p>Energising body scrub combining <strong>finely ground Arabica coffee</strong> with virgin coconut oil.</p><ul><li>Raw sugar for gentle exfoliation</li><li>Virgin coconut oil for deep moisture</li><li>Arabica coffee to boost circulation</li><li>250g amber glass jar</li><li>Handcrafted in Australia</li></ul>",
-    handle: "coconut-coffee-body-scrub-250g",
+      "<p>A low-profile round <strong>fiber pot</strong> ideal for tabletop displays.</p><ul><li>Perfect for succulents and small herbs</li><li>Round bowl shape</li><li>Lightweight and easy to move</li><li>Natural matte finish</li><li>Drainage hole included</li></ul>",
+    handle: "bowl-shape-fiber-pot",
     availableForSale: true,
-    productType: "Body Scrub",
-    options: [{ id: "opt-3", name: "Title", values: ["Default Title"] }],
-    images: makeImages("/images/collections/body-scrubs.jpg", "Coconut & Coffee Body Scrub"),
-    priceRange: { minVariantPrice: { amount: "29.95", currencyCode: "AUD" } },
+    productType: "Tabletop",
+    options: [
+      { id: "opt-3a", name: "Color", values: ["White", "Grey", "Natural"] },
+    ],
+    images: makeImages("/images/products/bowl-shape-fiber-pot.jpg", "Bowl Shape Fiber Pot"),
+    priceRange: { minVariantPrice: { amount: "49.00", currencyCode: "AUD" } },
     compareAtPriceRange: { minVariantPrice: { amount: "0", currencyCode: "AUD" } },
     variants: [
       {
-        id: "var-coconut-coffee-1",
-        title: "Default Title",
+        id: "var-bowl-white",
+        title: "White",
         availableForSale: true,
-        selectedOptions: [{ name: "Title", value: "Default Title" }],
-        price: { amount: "29.95", currencyCode: "AUD" },
+        selectedOptions: [{ name: "Color", value: "White" }],
+        price: { amount: "49.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-bowl-grey",
+        title: "Grey",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Grey" }],
+        price: { amount: "49.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-bowl-natural",
+        title: "Natural",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Natural" }],
+        price: { amount: "49.00", currencyCode: "AUD" },
       },
     ],
   },
   {
-    id: "static-lemon-myrtle-body-scrub",
-    title: "Lemon Myrtle Body Scrub - 250g",
+    id: "static-tall-square-planter",
+    title: "Tall Square Planter",
     description:
-      "Australian native lemon myrtle combined with sea salt and macadamia oil for a refreshing exfoliating scrub. The bright citrus scent uplifts while natural oils nourish and hydrate. Vegan and cruelty free.",
+      "A sleek, tall square planter built for outdoor use. Perfect for flanking doorways, lining patios, or creating garden borders. UV-protected and weather-resistant fiber construction stands up to the harshest Australian conditions.",
     descriptionHtml:
-      "<p><strong>Australian native lemon myrtle</strong> combined with sea salt and macadamia oil.</p><ul><li>Sea salt for effective exfoliation</li><li>Cold-pressed macadamia oil for hydration</li><li>Native lemon myrtle essential oil</li><li>250g amber glass jar</li><li>Vegan and cruelty free</li></ul>",
-    handle: "lemon-myrtle-body-scrub-250g",
+      "<p>A sleek, tall square <strong>outdoor planter</strong> built for the elements.</p><ul><li>UV-protected fiber material</li><li>Weather-resistant construction</li><li>Perfect for doorways and patios</li><li>Drainage hole included</li><li>Lightweight — easy to reposition</li></ul>",
+    handle: "tall-square-planter",
     availableForSale: true,
-    productType: "Body Scrub",
-    options: [{ id: "opt-4", name: "Title", values: ["Default Title"] }],
-    images: makeImages("/images/collections/body-scrubs.jpg", "Lemon Myrtle Body Scrub"),
-    priceRange: { minVariantPrice: { amount: "29.95", currencyCode: "AUD" } },
-    compareAtPriceRange: { minVariantPrice: { amount: "0", currencyCode: "AUD" } },
+    productType: "Outdoor Planters",
+    options: [
+      { id: "opt-4a", name: "Color", values: ["Charcoal", "White"] },
+    ],
+    images: makeImages("/images/products/tall-square-planter.jpg", "Tall Square Planter"),
+    priceRange: { minVariantPrice: { amount: "149.00", currencyCode: "AUD" } },
+    compareAtPriceRange: { minVariantPrice: { amount: "179.00", currencyCode: "AUD" } },
     variants: [
       {
-        id: "var-lemon-myrtle-1",
-        title: "Default Title",
+        id: "var-tallsq-charcoal",
+        title: "Charcoal",
         availableForSale: true,
-        selectedOptions: [{ name: "Title", value: "Default Title" }],
-        price: { amount: "29.95", currencyCode: "AUD" },
+        selectedOptions: [{ name: "Color", value: "Charcoal" }],
+        price: { amount: "149.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-tallsq-white",
+        title: "White",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "White" }],
+        price: { amount: "149.00", currencyCode: "AUD" },
       },
     ],
   },
   {
-    id: "static-lavender-essential-oil",
-    title: "Lavender Essential Oil - 30ml",
+    id: "static-big-cylindrical-fiber-planter",
+    title: "Big Cylindrical Fiber Planter",
     description:
-      "Therapeutic-grade lavender essential oil sourced from Australian and French botanicals. Perfect for diffusing, bath soaks, and massage. Promotes relaxation and restful sleep. Pure steam-distilled, no synthetics.",
+      "A large cylindrical planter designed for feature plants and indoor trees. The generous proportions make it the centrepiece of any room or outdoor space. Premium fiber construction keeps it lightweight despite its impressive size.",
     descriptionHtml:
-      "<p><strong>Therapeutic-grade lavender essential oil</strong> sourced from Australian and French botanicals.</p><ul><li>Pure steam-distilled extraction</li><li>30ml amber glass dropper bottle</li><li>Perfect for diffusers, baths, and massage</li><li>Promotes relaxation and restful sleep</li><li>No synthetics, no fillers</li></ul>",
-    handle: "lavender-essential-oil-30ml",
+      "<p>A large cylindrical <strong>fiber planter</strong> designed for feature plants and indoor trees.</p><ul><li>Generous proportions for large plants</li><li>Premium fiber — lighter than concrete or ceramic</li><li>UV-protected for outdoor use</li><li>Drainage hole included</li><li>Statement piece for any space</li></ul>",
+    handle: "big-cylindrical-fiber-planter",
     availableForSale: true,
-    productType: "Essential Oil",
-    options: [{ id: "opt-5", name: "Title", values: ["Default Title"] }],
-    images: makeImages("/images/collections/essential-oils.jpg", "Lavender Essential Oil"),
-    priceRange: { minVariantPrice: { amount: "24.95", currencyCode: "AUD" } },
-    compareAtPriceRange: { minVariantPrice: { amount: "0", currencyCode: "AUD" } },
+    productType: "Large Planters",
+    options: [
+      { id: "opt-5a", name: "Color", values: ["Grey", "Charcoal", "Natural"] },
+    ],
+    images: makeImages("/images/products/big-cylindrical-fiber-planter.jpg", "Big Cylindrical Fiber Planter"),
+    priceRange: { minVariantPrice: { amount: "249.00", currencyCode: "AUD" } },
+    compareAtPriceRange: { minVariantPrice: { amount: "299.00", currencyCode: "AUD" } },
     variants: [
       {
-        id: "var-lavender-oil-1",
-        title: "Default Title",
+        id: "var-bigcyl-grey",
+        title: "Grey",
         availableForSale: true,
-        selectedOptions: [{ name: "Title", value: "Default Title" }],
-        price: { amount: "24.95", currencyCode: "AUD" },
+        selectedOptions: [{ name: "Color", value: "Grey" }],
+        price: { amount: "249.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-bigcyl-charcoal",
+        title: "Charcoal",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Charcoal" }],
+        price: { amount: "249.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-bigcyl-natural",
+        title: "Natural",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Natural" }],
+        price: { amount: "249.00", currencyCode: "AUD" },
       },
     ],
   },
   {
-    id: "static-eucalyptus-essential-oil",
-    title: "Eucalyptus Essential Oil - 30ml",
+    id: "static-flare-round-planter",
+    title: "Flare Round Planter",
     description:
-      "Invigorating Australian eucalyptus essential oil, steam-distilled from native eucalyptus leaves. Ideal for clearing sinuses, refreshing living spaces, and adding to bath soaks. 100% pure and natural.",
+      "An elegant flared round planter with a wide opening that tapers to a stable base. Ideal for large feature plants, fiddle leaf figs, and bird of paradise. The generous width allows root systems to spread naturally.",
     descriptionHtml:
-      "<p><strong>Invigorating Australian eucalyptus essential oil</strong>, steam-distilled from native leaves.</p><ul><li>100% pure Australian eucalyptus</li><li>30ml amber glass dropper bottle</li><li>Ideal for diffusers and steam inhalation</li><li>Refreshing and clearing properties</li><li>No synthetics, no fillers</li></ul>",
-    handle: "eucalyptus-essential-oil-30ml",
+      "<p>An elegant <strong>flared round planter</strong> with a wide opening tapering to a stable base.</p><ul><li>Wide opening for large feature plants</li><li>Tapered base for stability</li><li>Premium fiber — lighter than stone</li><li>UV-protected and weather-resistant</li><li>Drainage hole included</li></ul>",
+    handle: "flare-round-planter",
     availableForSale: true,
-    productType: "Essential Oil",
-    options: [{ id: "opt-6", name: "Title", values: ["Default Title"] }],
-    images: makeImages("/images/collections/essential-oils.jpg", "Eucalyptus Essential Oil"),
-    priceRange: { minVariantPrice: { amount: "24.95", currencyCode: "AUD" } },
-    compareAtPriceRange: { minVariantPrice: { amount: "0", currencyCode: "AUD" } },
+    productType: "Large Planters",
+    options: [
+      { id: "opt-6a", name: "Color", values: ["Natural", "Charcoal"] },
+    ],
+    images: makeImages("/images/products/flare-round-planter.jpg", "Flare Round Planter"),
+    priceRange: { minVariantPrice: { amount: "269.00", currencyCode: "AUD" } },
+    compareAtPriceRange: { minVariantPrice: { amount: "319.00", currencyCode: "AUD" } },
     variants: [
       {
-        id: "var-eucalyptus-oil-1",
-        title: "Default Title",
+        id: "var-flare-natural",
+        title: "Natural",
         availableForSale: true,
-        selectedOptions: [{ name: "Title", value: "Default Title" }],
-        price: { amount: "24.95", currencyCode: "AUD" },
+        selectedOptions: [{ name: "Color", value: "Natural" }],
+        price: { amount: "269.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-flare-charcoal",
+        title: "Charcoal",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Charcoal" }],
+        price: { amount: "269.00", currencyCode: "AUD" },
       },
     ],
   },
   {
-    id: "static-australian-native-soy-candle",
-    title: "Australian Native Soy Candle - 300g",
+    id: "static-classic-curve-fiber-pot",
+    title: "Classic Curve Fiber Pot",
     description:
-      "Hand-poured 100% soy wax candle infused with native Australian botanicals including lemon myrtle and eucalyptus. Cotton wick for a clean, even burn. Approximately 45 hours burn time. Presented in a reusable amber glass vessel.",
+      "A timeless curved planter that blends seamlessly into any setting. The gentle curves and smooth matte finish give it a modern yet organic feel. Suitable for both indoor and outdoor use with UV protection.",
     descriptionHtml:
-      "<p><strong>Hand-poured 100% soy wax candle</strong> infused with native Australian botanicals.</p><ul><li>Lemon myrtle and eucalyptus essential oils</li><li>Cotton wick for clean, even burn</li><li>Approximately 45 hours burn time</li><li>300g reusable amber glass vessel</li><li>No toxins, no synthetic fragrances</li></ul>",
-    handle: "australian-native-soy-candle-300g",
+      "<p>A timeless <strong>curved fiber planter</strong> that blends seamlessly into any setting.</p><ul><li>Gentle curves with smooth matte finish</li><li>Indoor and outdoor suitable</li><li>UV-protected fiber material</li><li>Drainage hole included</li><li>Available in three classic colours</li></ul>",
+    handle: "classic-curve-fiber-pot",
     availableForSale: true,
-    productType: "Soy Candle",
-    options: [{ id: "opt-7", name: "Title", values: ["Default Title"] }],
-    images: makeImages("/images/collections/candles.jpg", "Australian Native Soy Candle"),
-    priceRange: { minVariantPrice: { amount: "44.95", currencyCode: "AUD" } },
+    productType: "Indoor Pots",
+    options: [
+      { id: "opt-7a", name: "Color", values: ["White", "Grey", "Charcoal"] },
+    ],
+    images: makeImages("/images/products/classic-curve-fiber-pot.jpg", "Classic Curve Fiber Pot"),
+    priceRange: { minVariantPrice: { amount: "119.00", currencyCode: "AUD" } },
     compareAtPriceRange: { minVariantPrice: { amount: "0", currencyCode: "AUD" } },
     variants: [
       {
-        id: "var-native-candle-1",
-        title: "Default Title",
+        id: "var-curve-white",
+        title: "White",
         availableForSale: true,
-        selectedOptions: [{ name: "Title", value: "Default Title" }],
-        price: { amount: "44.95", currencyCode: "AUD" },
+        selectedOptions: [{ name: "Color", value: "White" }],
+        price: { amount: "119.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-curve-grey",
+        title: "Grey",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Grey" }],
+        price: { amount: "119.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-curve-charcoal",
+        title: "Charcoal",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Charcoal" }],
+        price: { amount: "119.00", currencyCode: "AUD" },
       },
     ],
   },
   {
-    id: "static-coastal-breeze-soy-candle",
-    title: "Coastal Breeze Soy Candle - 300g",
+    id: "static-cone-shaped-planter",
+    title: "Cone Shaped Planter",
     description:
-      "Hand-poured soy wax candle with a fresh coastal scent of sea salt, driftwood, and light florals. Cotton wick for a clean burn. Approximately 45 hours burn time. Perfect for creating a relaxing coastal atmosphere at home.",
+      "A modern cone-shaped planter with a wide top and tapered base. The geometric silhouette adds a contemporary edge to any room. Lightweight fiber construction makes it easy to move and rearrange.",
     descriptionHtml:
-      "<p><strong>Hand-poured soy wax candle</strong> with a fresh coastal scent.</p><ul><li>Sea salt, driftwood, and light floral notes</li><li>Cotton wick for clean, even burn</li><li>Approximately 45 hours burn time</li><li>300g reusable amber glass vessel</li><li>No toxins, no synthetic fragrances</li></ul>",
-    handle: "coastal-breeze-soy-candle-300g",
+      "<p>A modern <strong>cone-shaped planter</strong> with a wide top and tapered base.</p><ul><li>Contemporary geometric design</li><li>Lightweight fiber construction</li><li>Perfect for medium houseplants</li><li>Matte finish in soft tones</li><li>Drainage hole included</li></ul>",
+    handle: "cone-shaped-planter",
     availableForSale: true,
-    productType: "Soy Candle",
-    options: [{ id: "opt-8", name: "Title", values: ["Default Title"] }],
-    images: makeImages("/images/collections/candles.jpg", "Coastal Breeze Soy Candle"),
-    priceRange: { minVariantPrice: { amount: "44.95", currencyCode: "AUD" } },
+    productType: "Indoor Pots",
+    options: [
+      { id: "opt-8a", name: "Color", values: ["White", "Natural", "Sage"] },
+    ],
+    images: makeImages("/images/products/cone-shaped-planter.jpg", "Cone Shaped Planter"),
+    priceRange: { minVariantPrice: { amount: "69.00", currencyCode: "AUD" } },
     compareAtPriceRange: { minVariantPrice: { amount: "0", currencyCode: "AUD" } },
     variants: [
       {
-        id: "var-coastal-candle-1",
-        title: "Default Title",
+        id: "var-cone-white",
+        title: "White",
         availableForSale: true,
-        selectedOptions: [{ name: "Title", value: "Default Title" }],
-        price: { amount: "44.95", currencyCode: "AUD" },
+        selectedOptions: [{ name: "Color", value: "White" }],
+        price: { amount: "69.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-cone-natural",
+        title: "Natural",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Natural" }],
+        price: { amount: "69.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-cone-sage",
+        title: "Sage",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Sage" }],
+        price: { amount: "69.00", currencyCode: "AUD" },
       },
     ],
   },
   {
-    id: "static-lemongrass-hand-wash",
-    title: "Lemongrass Hand Wash - 500ml",
+    id: "static-hanging-macrame-pot",
+    title: "Hanging Macrame Pot",
     description:
-      "Gentle foaming hand wash with pure lemongrass essential oil and aloe vera. Cleanses without stripping natural moisture. Presented in a refillable amber glass pump bottle. Australian made, vegan, cruelty free.",
+      "A fiber pot paired with a handcrafted macrame hanger. Perfect for trailing plants like pothos, string of pearls, and ivy. The natural macrame rope adds a bohemian touch to balconies, verandahs, and indoor spaces.",
     descriptionHtml:
-      "<p><strong>Gentle foaming hand wash</strong> with pure lemongrass essential oil and aloe vera.</p><ul><li>Lemongrass essential oil for natural freshness</li><li>Aloe vera and vitamin E for soft hands</li><li>500ml refillable amber glass pump bottle</li><li>Australian made, vegan, cruelty free</li><li>No parabens, no SLS, no synthetics</li></ul>",
-    handle: "lemongrass-hand-wash-500ml",
+      "<p>A fiber pot paired with a <strong>handcrafted macrame hanger</strong>.</p><ul><li>Includes fiber pot and macrame rope</li><li>Perfect for trailing plants</li><li>Natural bohemian aesthetic</li><li>Suitable for indoor and sheltered outdoor use</li><li>Drainage hole included</li></ul>",
+    handle: "hanging-macrame-pot",
     availableForSale: true,
-    productType: "Hand Wash",
-    options: [{ id: "opt-9", name: "Title", values: ["Default Title"] }],
-    images: makeImages("/images/about-workshop.jpg", "Lemongrass Hand Wash"),
-    priceRange: { minVariantPrice: { amount: "19.95", currencyCode: "AUD" } },
+    productType: "Hanging Pots",
+    options: [
+      { id: "opt-9a", name: "Color", values: ["Natural", "Black"] },
+    ],
+    images: makeImages("/images/products/hanging-macrame-pot.jpg", "Hanging Macrame Pot"),
+    priceRange: { minVariantPrice: { amount: "59.00", currencyCode: "AUD" } },
     compareAtPriceRange: { minVariantPrice: { amount: "0", currencyCode: "AUD" } },
     variants: [
       {
-        id: "var-lemongrass-wash-1",
-        title: "Default Title",
+        id: "var-macrame-natural",
+        title: "Natural",
         availableForSale: true,
-        selectedOptions: [{ name: "Title", value: "Default Title" }],
-        price: { amount: "19.95", currencyCode: "AUD" },
+        selectedOptions: [{ name: "Color", value: "Natural" }],
+        price: { amount: "59.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-macrame-black",
+        title: "Black",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Black" }],
+        price: { amount: "59.00", currencyCode: "AUD" },
       },
     ],
   },
   {
-    id: "static-tea-tree-hand-wash",
-    title: "Tea Tree Hand Wash - 500ml",
+    id: "static-ribbed-cylinder-pot",
+    title: "Ribbed Cylinder Pot",
     description:
-      "Antibacterial hand wash powered by Australian tea tree essential oil with added moisturisers. Cleans and protects while keeping hands soft. Presented in a refillable amber glass pump bottle. Vegan and cruelty free.",
+      "A textured cylindrical planter with vertical ribbing that adds depth and character. The ribbed pattern catches light beautifully, creating subtle shadows throughout the day. A standout piece for any indoor plant collection.",
     descriptionHtml:
-      "<p><strong>Antibacterial hand wash</strong> powered by Australian tea tree essential oil.</p><ul><li>Australian tea tree essential oil</li><li>Natural antibacterial properties</li><li>Added moisturisers for soft hands</li><li>500ml refillable amber glass pump bottle</li><li>Vegan and cruelty free</li></ul>",
-    handle: "tea-tree-hand-wash-500ml",
+      "<p>A textured <strong>cylindrical planter</strong> with vertical ribbing for depth and character.</p><ul><li>Vertical ribbed texture</li><li>Catches light for subtle shadow play</li><li>Premium fiber material</li><li>Suitable for medium houseplants</li><li>Drainage hole included</li></ul>",
+    handle: "ribbed-cylinder-pot",
     availableForSale: true,
-    productType: "Hand Wash",
-    options: [{ id: "opt-10", name: "Title", values: ["Default Title"] }],
-    images: makeImages("/images/about-workshop.jpg", "Tea Tree Hand Wash"),
-    priceRange: { minVariantPrice: { amount: "19.95", currencyCode: "AUD" } },
+    productType: "Indoor Pots",
+    options: [
+      { id: "opt-10a", name: "Color", values: ["White", "Charcoal", "Terracotta"] },
+    ],
+    images: makeImages("/images/products/ribbed-cylinder-pot.jpg", "Ribbed Cylinder Pot"),
+    priceRange: { minVariantPrice: { amount: "99.00", currencyCode: "AUD" } },
     compareAtPriceRange: { minVariantPrice: { amount: "0", currencyCode: "AUD" } },
     variants: [
       {
-        id: "var-tea-tree-wash-1",
-        title: "Default Title",
+        id: "var-ribbed-white",
+        title: "White",
         availableForSale: true,
-        selectedOptions: [{ name: "Title", value: "Default Title" }],
-        price: { amount: "19.95", currencyCode: "AUD" },
+        selectedOptions: [{ name: "Color", value: "White" }],
+        price: { amount: "99.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-ribbed-charcoal",
+        title: "Charcoal",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Charcoal" }],
+        price: { amount: "99.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-ribbed-terracotta",
+        title: "Terracotta",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Terracotta" }],
+        price: { amount: "99.00", currencyCode: "AUD" },
+      },
+    ],
+  },
+  {
+    id: "static-low-wide-bowl",
+    title: "Low Wide Bowl",
+    description:
+      "A wide, shallow fiber bowl perfect for succulent arrangements, herb gardens, and centrepiece displays. The low profile keeps the focus on your plants. Ideal for tabletops, windowsills, and dining tables.",
+    descriptionHtml:
+      "<p>A wide, shallow <strong>fiber bowl</strong> perfect for succulent arrangements and centrepiece displays.</p><ul><li>Wide shallow profile</li><li>Ideal for succulents and herb gardens</li><li>Perfect tabletop centrepiece</li><li>Lightweight fiber material</li><li>Drainage hole included</li></ul>",
+    handle: "low-wide-bowl",
+    availableForSale: true,
+    productType: "Tabletop",
+    options: [
+      { id: "opt-11a", name: "Color", values: ["White", "Grey", "Natural"] },
+    ],
+    images: makeImages("/images/products/low-wide-bowl.jpg", "Low Wide Bowl"),
+    priceRange: { minVariantPrice: { amount: "39.00", currencyCode: "AUD" } },
+    compareAtPriceRange: { minVariantPrice: { amount: "0", currencyCode: "AUD" } },
+    variants: [
+      {
+        id: "var-lowbowl-white",
+        title: "White",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "White" }],
+        price: { amount: "39.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-lowbowl-grey",
+        title: "Grey",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Grey" }],
+        price: { amount: "39.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-lowbowl-natural",
+        title: "Natural",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Natural" }],
+        price: { amount: "39.00", currencyCode: "AUD" },
+      },
+    ],
+  },
+  {
+    id: "static-textured-stone-pot",
+    title: "Textured Stone Pot",
+    description:
+      "A fiber planter with a realistic stone texture finish. Looks and feels like natural stone but weighs a fraction of the real thing. Built for outdoor use with full UV protection and weather resistance.",
+    descriptionHtml:
+      "<p>A fiber planter with a realistic <strong>stone texture finish</strong>.</p><ul><li>Realistic stone-look surface</li><li>Fraction of the weight of real stone</li><li>Full UV protection</li><li>Weather-resistant for outdoor use</li><li>Drainage hole included</li></ul>",
+    handle: "textured-stone-pot",
+    availableForSale: true,
+    productType: "Outdoor Planters",
+    options: [
+      { id: "opt-12a", name: "Color", values: ["Sandstone", "Charcoal"] },
+    ],
+    images: makeImages("/images/products/textured-stone-pot.jpg", "Textured Stone Pot"),
+    priceRange: { minVariantPrice: { amount: "159.00", currencyCode: "AUD" } },
+    compareAtPriceRange: { minVariantPrice: { amount: "0", currencyCode: "AUD" } },
+    variants: [
+      {
+        id: "var-stone-sandstone",
+        title: "Sandstone",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Sandstone" }],
+        price: { amount: "159.00", currencyCode: "AUD" },
+      },
+      {
+        id: "var-stone-charcoal",
+        title: "Charcoal",
+        availableForSale: true,
+        selectedOptions: [{ name: "Color", value: "Charcoal" }],
+        price: { amount: "159.00", currencyCode: "AUD" },
       },
     ],
   },
 ]
+
+// ---------------------------------------------------------------------------
+// Collection mapping — maps collection handles to product types or filters
+// ---------------------------------------------------------------------------
+
+const COLLECTION_MAP: Record<string, (p: Product) => boolean> = {
+  "indoor-pots": (p) => p.productType === "Indoor Pots",
+  "outdoor-planters": (p) => p.productType === "Outdoor Planters",
+  "hanging-pots": (p) => p.productType === "Hanging Pots",
+  "tabletop": (p) => p.productType === "Tabletop",
+  "large-planters": (p) => p.productType === "Large Planters",
+  "sale": (p) =>
+    parseFloat(p.compareAtPriceRange?.minVariantPrice?.amount ?? "0") > 0,
+  "new-arrivals": (p) => staticProducts.indexOf(p) < 6,
+}
+
+// ---------------------------------------------------------------------------
+// Query helpers
+// ---------------------------------------------------------------------------
 
 export function getStaticProducts(): Product[] {
   return staticProducts
@@ -267,4 +528,14 @@ export function getStaticProducts(): Product[] {
 
 export function getStaticProduct(handle: string): Product | null {
   return staticProducts.find((p) => p.handle === handle) ?? null
+}
+
+export function getStaticProductsByType(productType: string): Product[] {
+  return staticProducts.filter((p) => p.productType === productType)
+}
+
+export function getStaticCollectionProducts(collectionHandle: string): Product[] {
+  const filterFn = COLLECTION_MAP[collectionHandle]
+  if (!filterFn) return []
+  return staticProducts.filter(filterFn)
 }

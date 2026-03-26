@@ -5,51 +5,51 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Salt & Stone AU — Sage Green / Warm Gold / Off-White */
-  --background: oklch(0.96 0.006 80);        /* warm off-white #F5F3EF */
-  --foreground: oklch(0.15 0.005 0);         /* near black #1A1A1A */
-  --card: oklch(0.99 0.003 80);              /* near-white card */
+  /* Terra Bloom — Deep Green / Mint Green / Light Green-White */
+  --background: oklch(0.98 0.008 130);        /* light green-white #FAFDF7 */
+  --foreground: oklch(0.15 0.005 0);          /* near black #1B1B1B */
+  --card: oklch(0.99 0.005 130);              /* near-white card */
   --card-foreground: oklch(0.15 0.005 0);
-  --popover: oklch(0.99 0.003 80);
+  --popover: oklch(0.99 0.005 130);
   --popover-foreground: oklch(0.15 0.005 0);
-  --primary: oklch(0.40 0.04 155);           /* sage green #4A5B4F */
-  --primary-foreground: oklch(0.99 0.003 80);
-  --secondary: oklch(0.93 0.008 80);         /* warm light grey */
+  --primary: oklch(0.38 0.08 160);            /* deep green #2D6A4F */
+  --primary-foreground: oklch(0.99 0.005 130);
+  --secondary: oklch(0.94 0.01 140);          /* light green-grey */
   --secondary-foreground: oklch(0.15 0.005 0);
-  --muted: oklch(0.93 0.008 80);
-  --muted-foreground: oklch(0.45 0.02 55);   /* darkened for WCAG AA */
-  --accent: oklch(0.72 0.07 75);             /* warm gold #C4A875 */
+  --muted: oklch(0.94 0.01 140);
+  --muted-foreground: oklch(0.45 0.03 160);   /* darkened for WCAG AA */
+  --accent: oklch(0.80 0.08 155);             /* mint green #95D5B2 */
   --accent-foreground: oklch(0.15 0.005 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.99 0.003 80);
-  --border: oklch(0.88 0.010 75);            /* warm subtle border */
-  --input: oklch(0.93 0.008 80);
-  --ring: oklch(0.40 0.04 155);
-  --chart-1: oklch(0.40 0.04 155);
-  --chart-2: oklch(0.72 0.07 75);
-  --chart-3: oklch(0.55 0.04 155);
-  --chart-4: oklch(0.82 0.06 80);
-  --chart-5: oklch(0.35 0.03 155);
-  --radius: 0.375rem;                        /* subtle rounding */
-  --sidebar: oklch(0.95 0.006 78);
+  --destructive-foreground: oklch(0.99 0.005 130);
+  --border: oklch(0.90 0.012 140);            /* subtle green-grey border */
+  --input: oklch(0.94 0.01 140);
+  --ring: oklch(0.38 0.08 160);
+  --chart-1: oklch(0.38 0.08 160);
+  --chart-2: oklch(0.80 0.08 155);
+  --chart-3: oklch(0.50 0.06 160);
+  --chart-4: oklch(0.85 0.06 145);
+  --chart-5: oklch(0.30 0.06 160);
+  --radius: 0.375rem;                         /* subtle rounding */
+  --sidebar: oklch(0.96 0.008 135);
   --sidebar-foreground: oklch(0.15 0.005 0);
-  --sidebar-primary: oklch(0.40 0.04 155);
-  --sidebar-primary-foreground: oklch(0.99 0.003 80);
-  --sidebar-accent: oklch(0.93 0.008 80);
+  --sidebar-primary: oklch(0.38 0.08 160);
+  --sidebar-primary-foreground: oklch(0.99 0.005 130);
+  --sidebar-accent: oklch(0.94 0.01 140);
   --sidebar-accent-foreground: oklch(0.15 0.005 0);
-  --sidebar-border: oklch(0.88 0.010 75);
-  --sidebar-ring: oklch(0.40 0.04 155);
+  --sidebar-border: oklch(0.90 0.012 140);
+  --sidebar-ring: oklch(0.38 0.08 160);
 
-  /* Brand tokens */
-  --gold: oklch(0.72 0.07 75);               /* warm gold accent #C4A875 */
-  --gold-light: oklch(0.82 0.06 75);
-  --cream: oklch(0.96 0.006 80);
-  --cream-dark: oklch(0.93 0.008 80);
+  /* Brand tokens — mint/leaf (kept as --gold/--cream to avoid breaking component refs) */
+  --gold: oklch(0.80 0.08 155);               /* mint green accent #95D5B2 */
+  --gold-light: oklch(0.85 0.06 155);
+  --cream: oklch(0.98 0.008 130);
+  --cream-dark: oklch(0.94 0.01 140);
 }
 
 @theme inline {
   --font-sans: 'Inter', 'Inter Fallback', sans-serif;
-  --font-serif: 'Cormorant Garamond', 'Georgia', serif;
+  --font-serif: 'DM Serif Display', 'Georgia', serif;
   --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
