@@ -1,20 +1,25 @@
-import { brand } from "@/config/brand"
+import { Shield, Truck, Recycle, Sun, Award } from "lucide-react"
+
+const BADGES = [
+  { icon: Sun, label: "UV Protected" },
+  { icon: Shield, label: "Weather Resistant" },
+  { icon: Recycle, label: "Eco-Friendly" },
+  { icon: Truck, label: "7-Day Delivery" },
+  { icon: Award, label: "Quality Guaranteed" },
+]
 
 export function TrustBar() {
-  const items = brand.trustBar
-
   return (
-    <section className="overflow-hidden border-y border-border bg-secondary py-4">
-      <div className="animate-marquee flex w-max gap-16">
-        {[...items, ...items].map((item, i) => (
-          <span
-            key={i}
-            className="flex items-center gap-3 whitespace-nowrap font-sans text-xs uppercase tracking-[0.3em] text-muted-foreground"
-          >
-            <span className="h-1 w-1 bg-primary" />
-            {item}
-          </span>
-        ))}
+    <section className="border-y border-gray-100 bg-white py-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-16">
+          {BADGES.map((badge) => (
+            <div key={badge.label} className="flex items-center gap-2 text-gray-600">
+              <badge.icon className="w-5 h-5" style={{ color: '#2D6A4F' }} />
+              <span className="text-sm font-medium">{badge.label}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

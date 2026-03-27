@@ -1,88 +1,35 @@
-"use client"
-
 import { Star } from "lucide-react"
-import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-import { useRef } from "react"
-
-const REVIEWS = [
-  {
-    name: "Priya S.",
-    location: "Sydney",
-    text: "The Apple Shape Pot is stunning. So much lighter than ceramic but looks just as premium. My monstera loves it.",
-    rating: 5,
-  },
-  {
-    name: "Raj K.",
-    location: "Melbourne",
-    text: "Ordered 4 outdoor planters for our patio. Survived a Melbourne winter with zero damage. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "Sarah L.",
-    location: "Brisbane",
-    text: "The tabletop pots are perfect for my herb garden. Clean design, great quality, and they arrived in 5 days.",
-    rating: 5,
-  },
-  {
-    name: "Michael T.",
-    location: "Perth",
-    text: "We renovated our office courtyard with Terra Bloom large planters. The team couldn't believe they're not stone.",
-    rating: 5,
-  },
-  {
-    name: "Anita D.",
-    location: "Adelaide",
-    text: "Love that these are recyclable. Finally a planter brand that cares about sustainability. Beautiful products too.",
-    rating: 5,
-  },
-]
+import { brand } from "@/config/brand"
 
 export function Testimonials() {
-  const ref = useScrollAnimation()
-  const scrollRef = useRef<HTMLDivElement>(null)
-
   return (
-    <section ref={ref} className="bg-secondary py-24 lg:py-32">
-      <div className="px-6 md:px-12 lg:px-20">
-        <p className="animate-on-scroll font-sans text-sm tracking-[0.4em] uppercase text-primary">
-          Proof
-        </p>
-        <h2 className="animate-on-scroll delay-1 mt-4 font-serif text-3xl tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl text-balance">
-          Don't take our word for it.
-        </h2>
-      </div>
-
-      {/* Horizontal scroll reviews */}
-      <div
-        ref={scrollRef}
-        className="horizontal-scroll mt-12 flex gap-5 overflow-x-auto px-6 pb-4 md:px-12 lg:px-20"
-      >
-        {REVIEWS.map((r, i) => (
-          <div
-            key={r.name}
-            className={`animate-on-scroll delay-${Math.min(i + 1, 5)} flex w-[320px] flex-shrink-0 flex-col justify-between border border-border bg-card p-8 md:w-[380px]`}
-          >
-            <div>
-              <div className="flex gap-0.5">
-                {Array.from({ length: r.rating }).map((_, j) => (
-                  <Star key={j} className="h-4 w-4 fill-primary text-primary" />
+    <section className="py-16 lg:py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-3">What Our Customers Say</h2>
+          <p className="text-gray-600">Trusted by plant lovers across Australia</p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {brand.testimonials.slice(0, 3).map((t, i) => (
+            <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+              <div className="flex gap-0.5 mb-3">
+                {Array.from({ length: t.rating }).map((_, j) => (
+                  <Star key={j} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <p className="mt-5 text-base leading-relaxed text-card-foreground">
-                {`"${r.text}"`}
-              </p>
-            </div>
-            <div className="mt-8 flex items-center gap-3 border-t border-border pt-5">
-              <div className="flex h-8 w-8 items-center justify-center bg-primary text-primary-foreground font-sans text-xs">
-                {r.name[0]}
-              </div>
-              <div>
-                <p className="text-base font-medium text-card-foreground">{r.name}</p>
-                <p className="font-sans text-xs text-muted-foreground">{r.location}, AU</p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-4">&ldquo;{t.text}&rdquo;</p>
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ backgroundColor: '#2D6A4F' }}>
+                  {t.name.charAt(0)}
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-gray-900">{t.name}</p>
+                  <p className="text-xs text-gray-500">{t.location}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )

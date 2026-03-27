@@ -1,73 +1,44 @@
-"use client"
-
 import Image from "next/image"
-import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { brand } from "@/config/brand"
+import { Leaf, Recycle, Sun, Shield } from "lucide-react"
+
+const FEATURES = [
+  { icon: Leaf, title: "Premium Fiber", desc: "Lightweight yet incredibly strong" },
+  { icon: Sun, title: "UV Protected", desc: "Colours stay vibrant year-round" },
+  { icon: Shield, title: "Weather Resistant", desc: "Built for Australian conditions" },
+  { icon: Recycle, title: "Eco-Friendly", desc: "100% recyclable material" },
+]
 
 export function BrandStory() {
-  const ref = useScrollAnimation()
-
   return (
-    <section ref={ref} className="relative overflow-hidden bg-background">
-      {/* Split screen -- image left, manifesto right */}
-      <div className="grid min-h-[60vh] lg:grid-cols-2">
-        {/* Image side */}
-        <div className="relative min-h-[40vh] lg:min-h-[60vh] overflow-hidden">
-          <Image
-            src="/images/hero/homepage-hero.jpg"
-            alt={`${brand.name} premium planter collection`}
-            fill
-            className="object-cover parallax-zoom"
-            sizes="(min-width: 1024px) 50vw, 100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/30 lg:bg-gradient-to-r lg:from-transparent lg:to-background" />
-        </div>
-
-        {/* Manifesto side */}
-        <div className="flex items-center px-6 py-20 md:px-12 lg:px-20 lg:py-20">
-          <div className="max-w-lg">
-            <p className="animate-on-scroll font-sans text-sm tracking-[0.4em] uppercase text-primary">
-              Our Manifesto
+    <section className="py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100">
+            <Image
+              src="/images/collections/outdoor-planters.jpg"
+              alt={`${brand.name} premium planter collection`}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why {brand.name}?</h2>
+            <p className="text-gray-600 leading-relaxed mb-8">
+              We started Terra Bloom because planters shouldn&apos;t compromise on beauty, durability, or sustainability. Our premium fiber material is lighter than ceramic, stronger than plastic, and better for the planet.
             </p>
-
-            <h2 className="animate-on-scroll delay-1 mt-6 font-serif text-3xl leading-[1.1] tracking-tight text-foreground md:text-4xl lg:text-5xl text-balance">
-              Premium material. Timeless design.
-            </h2>
-
-            <div className="animate-on-scroll delay-2 mt-8 space-y-5 text-sm leading-relaxed text-muted-foreground md:text-base">
-              <p>
-                For too long, planters have been either fragile ceramic that chips, heavy concrete that cracks, or cheap plastic that fades. We started Terra Bloom to prove there's a better way — premium fiber planters that are lightweight, weather-resistant, UV-protected, and beautiful enough for any space.
-              </p>
-              <p>
-                Every {brand.name} planter starts with one principle: form meets
-                function. From compact tabletop pots to statement-making large planters — every piece is crafted from premium fiber material
-                right here in Australia.
-              </p>
-              <p className="text-foreground font-medium">
-                No cracking. No fading. No compromise. Just planters built to
-                last and designed to impress.
-              </p>
-            </div>
-
-            <div className="animate-on-scroll delay-3 mt-10 flex gap-12">
-              <div>
-                <span className="block font-serif text-3xl text-primary md:text-4xl">{brand.collections.length}</span>
-                <span className="mt-1 block font-sans text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                  Collections
-                </span>
-              </div>
-              <div>
-                <span className="block font-serif text-3xl text-primary md:text-4xl">UV</span>
-                <span className="mt-1 block font-sans text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                  Protected
-                </span>
-              </div>
-              <div>
-                <span className="block font-serif text-3xl text-primary md:text-4xl">100%</span>
-                <span className="mt-1 block font-sans text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                  Recyclable
-                </span>
-              </div>
+            <div className="grid grid-cols-2 gap-4">
+              {FEATURES.map((f) => (
+                <div key={f.title} className="flex items-start gap-3 p-3 rounded-xl bg-green-50">
+                  <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#2D6A4F' }}>
+                    <f.icon className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900">{f.title}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{f.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
