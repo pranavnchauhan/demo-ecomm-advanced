@@ -26,7 +26,7 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero/homepage-hero.jpg"
-          alt={`${brand.name} natural body care product range`}
+          alt={`${brand.name} premium fiber planter collection`}
           fill
           className="object-cover object-center"
           priority
@@ -45,7 +45,7 @@ export function HeroSection() {
             }`}
           >
             <span className="font-sans text-sm tracking-[0.4em] uppercase text-primary md:text-base">
-              Natural Body Care & Home Essentials
+              Premium Fiber Planters
             </span>
           </div>
 

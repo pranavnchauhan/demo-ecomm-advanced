@@ -3,10 +3,10 @@ import { Instagram } from "lucide-react"
 import { brand } from "@/config/brand"
 
 const FOOTER_LINKS = [
-  { href: "/shop", label: "Shop" },
+  { href: "/shop", label: "Shop All" },
+  { href: "/collections/indoor-pots", label: "Indoor Pots" },
+  { href: "/collections/outdoor-planters", label: "Outdoor Planters" },
   { href: "/about", label: "Our Story" },
-  { href: "/blog", label: "Journal" },
-  { href: "/quiz", label: "Quiz" },
   { href: "/contact", label: "Contact" },
   { href: "/faq", label: "FAQ" },
   { href: "/policies/shipping", label: "Shipping" },
@@ -67,14 +67,9 @@ export function SiteFooter() {
           <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
             {/* Left: Logo & tagline */}
             <div className="flex flex-col items-center lg:items-start">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={brand.logo.default}
-                alt={brand.name}
-                width={120}
-                height={30}
-                className="h-6 w-auto"
-              />
+              <span className="font-serif text-xl tracking-wide text-foreground">
+                {brand.name}
+              </span>
               <p className="mt-2 text-xs text-muted-foreground">
                 {brand.tagline}
               </p>

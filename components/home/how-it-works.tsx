@@ -7,21 +7,21 @@ import { brand } from "@/config/brand"
 const STEPS = [
   {
     num: "01",
-    title: "Choose your ritual",
-    sub: "Bath. Body. Home.",
-    desc: "Bath salts for unwinding, body scrubs for glow, essential oils for calm, soy candles for ambience, and hand wash for everyday care. Pick what speaks to you.",
+    title: "Choose Your Style",
+    sub: "Indoor. Outdoor. Hanging. Tabletop.",
+    desc: "Indoor pots for living rooms and offices, outdoor planters for patios and gardens, hanging pots for balconies, or tabletop for desks and windowsills. Pick what fits your space.",
   },
   {
     num: "02",
-    title: "Use with intention",
-    sub: "Simple. Sensory. Daily.",
-    desc: "Add salts to a warm bath. Massage scrub into damp skin. Diffuse oils while you work. Light a candle at the end of the day. Small rituals, big difference.",
+    title: "Select Size & Color",
+    sub: "Mix. Match. Arrange.",
+    desc: "Each planter comes in multiple sizes and neutral tones — White, Charcoal, Grey, Natural. Mix and match to create your perfect arrangement.",
   },
   {
     num: "03",
-    title: "Feel the difference",
-    sub: "Clean in. Clean out.",
-    desc: "No parabens. No sulphates. No synthetics. Just pure, natural ingredients handcrafted in Australia, working the way nature intended.",
+    title: "Plant & Enjoy",
+    sub: "Built to last.",
+    desc: "Your planter arrives in 7 days. UV-protected finish means colours stay vibrant. Weather-resistant means no cracks or fading. Just add your favourite plant and enjoy.",
   },
 ]
 
@@ -36,7 +36,7 @@ export function HowItWorks() {
           <div className="relative h-full lg:min-h-[600px]">
             <Image
               src="/images/hero/homepage-hero.jpg"
-              alt={`${brand.name} natural body care products`}
+              alt={`${brand.name} premium fiber planters`}
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 45vw, 100vw"

@@ -15,7 +15,7 @@ export function BrandStory() {
         <div className="relative min-h-[40vh] lg:min-h-[60vh] overflow-hidden">
           <Image
             src="/images/hero/homepage-hero.jpg"
-            alt={`${brand.name} natural body care collection`}
+            alt={`${brand.name} premium planter collection`}
             fill
             className="object-cover parallax-zoom"
             sizes="(min-width: 1024px) 50vw, 100vw"
@@ -31,25 +31,21 @@ export function BrandStory() {
             </p>
 
             <h2 className="animate-on-scroll delay-1 mt-6 font-serif text-3xl leading-[1.1] tracking-tight text-foreground md:text-4xl lg:text-5xl text-balance">
-              Pure ingredients. Nothing else.
+              Premium material. Timeless design.
             </h2>
 
             <div className="animate-on-scroll delay-2 mt-8 space-y-5 text-sm leading-relaxed text-muted-foreground md:text-base">
               <p>
-                For too long, the body care industry has been filled with
-                synthetic fragrances, harsh chemicals, and ingredients you
-                cannot pronounce. We decided that was enough.
+                For too long, planters have been either fragile ceramic that chips, heavy concrete that cracks, or cheap plastic that fades. We started Terra Bloom to prove there's a better way — premium fiber planters that are lightweight, weather-resistant, UV-protected, and beautiful enough for any space.
               </p>
               <p>
-                Every {brand.name} product starts with one principle: the purest,
-                most natural ingredients possible. From mineral-rich bath salts
-                and hand-blended body scrubs to therapeutic essential oils and
-                hand-poured soy candles — everything is crafted in small batches
+                Every {brand.name} planter starts with one principle: form meets
+                function. From compact tabletop pots to statement-making large planters — every piece is crafted from premium fiber material
                 right here in Australia.
               </p>
               <p className="text-foreground font-medium">
-                No parabens. No sulphates. No compromise. Just what your body
-                deserves and nothing it does not.
+                No cracking. No fading. No compromise. Just planters built to
+                last and designed to impress.
               </p>
             </div>
 
@@ -61,15 +57,15 @@ export function BrandStory() {
                 </span>
               </div>
               <div>
-                <span className="block font-serif text-3xl text-primary md:text-4xl">0</span>
+                <span className="block font-serif text-3xl text-primary md:text-4xl">UV</span>
                 <span className="mt-1 block font-sans text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                  Harsh chemicals
+                  Protected
                 </span>
               </div>
               <div>
                 <span className="block font-serif text-3xl text-primary md:text-4xl">100%</span>
                 <span className="mt-1 block font-sans text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                  Australian made
+                  Recyclable
                 </span>
               </div>
             </div>

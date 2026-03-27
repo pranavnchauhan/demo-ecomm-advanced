@@ -9,10 +9,10 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import type { Product } from "@/lib/shopify/types"
 
 const PLACEHOLDER_PRODUCTS = [
-  { name: "Himalayan Bath Salts", accent: "Mineral Rich", image: "/images/collections/bath-salts.jpg" },
-  { name: "Coconut Body Scrub", accent: "Smooth & Natural", image: "/images/collections/body-scrubs.jpg" },
-  { name: "Lavender Essential Oil", accent: "Calm & Soothing", image: "/images/collections/essential-oils.jpg" },
-  { name: "Eucalyptus Soy Candle", accent: "Clean Burn", image: "/images/collections/candles.jpg" },
+  { name: "Apple Shape Pot", accent: "Indoor Classic", image: "/images/collections/indoor-pots.jpg" },
+  { name: "Tall Square Planter", accent: "Outdoor Ready", image: "/images/collections/outdoor-planters.jpg" },
+  { name: "Hanging Macrame Pot", accent: "Space Saver", image: "/images/collections/hanging-pots.jpg" },
+  { name: "Low Wide Bowl", accent: "Tabletop Perfect", image: "/images/collections/tabletop.jpg" },
 ]
 
 export function FeaturedProducts({ products }: { products: Product[] }) {
@@ -41,7 +41,7 @@ export function FeaturedProducts({ products }: { products: Product[] }) {
               Our bestsellers.
             </h2>
             <p className="animate-on-scroll delay-2 mt-4 text-base text-muted-foreground max-w-2xl">
-              Handcrafted natural body care and home essentials, made in Australia with pure ingredients.
+              Premium fiber planters for indoor and outdoor living. Lightweight, weather-resistant, and designed in Australia.
             </p>
           </div>
           <div className="animate-on-scroll delay-2 hidden items-center gap-2 sm:flex">
@@ -83,7 +83,7 @@ export function FeaturedProducts({ products }: { products: Product[] }) {
                 <div className="relative aspect-[3/4] overflow-hidden bg-secondary">
                   <Image
                     src={p.image}
-                    alt={`Salt & Stone AU ${p.name}`}
+                    alt={`Terra Bloom ${p.name}`}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="380px"

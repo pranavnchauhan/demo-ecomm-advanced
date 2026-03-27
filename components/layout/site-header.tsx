@@ -10,11 +10,11 @@ import { brand } from "@/config/brand"
 const NAV_LEFT = [
   { href: "/shop", label: "Shop" },
   { href: "/about", label: "Our Story" },
-  { href: "/quiz", label: "Quiz" },
+  { href: "/collections/indoor-pots", label: "Indoor" },
 ]
 
 const NAV_RIGHT = [
-  { href: "/blog", label: "Journal" },
+  { href: "/collections/outdoor-planters", label: "Outdoor" },
   { href: "/contact", label: "Contact" },
 ]
 
@@ -72,14 +72,9 @@ export function SiteHeader() {
 
           {/* Logo + tagline */}
           <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={brand.logo.default}
-              alt={brand.name}
-              width={140}
-              height={35}
-              className="h-9 w-auto lg:h-10"
-            />
+            <span className="font-serif text-2xl lg:text-3xl tracking-wide text-foreground">
+              {brand.name}
+            </span>
             <span className="mt-0.5 font-sans text-[8px] tracking-[0.15em] text-muted-foreground lg:text-[11px] lg:mt-1 lg:tracking-[0.2em]">
               {brand.tagline}
             </span>

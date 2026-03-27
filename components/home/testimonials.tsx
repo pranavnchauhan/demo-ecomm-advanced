@@ -6,33 +6,33 @@ import { useRef } from "react"
 
 const REVIEWS = [
   {
-    name: "Sarah M.",
+    name: "Priya S.",
     location: "Sydney",
-    text: "The lavender bath salts are incredible. My skin has never felt softer and the scent is divine.",
+    text: "The Apple Shape Pot is stunning. So much lighter than ceramic but looks just as premium. My monstera loves it.",
     rating: 5,
   },
   {
-    name: "James K.",
+    name: "Raj K.",
     location: "Melbourne",
-    text: "Finally found a body scrub that actually uses natural ingredients. Love it.",
+    text: "Ordered 4 outdoor planters for our patio. Survived a Melbourne winter with zero damage. Highly recommend.",
     rating: 5,
   },
   {
-    name: "Emily R.",
+    name: "Sarah L.",
     location: "Brisbane",
-    text: "The soy candles burn beautifully and the scents are divine. Will be ordering more.",
+    text: "The tabletop pots are perfect for my herb garden. Clean design, great quality, and they arrived in 5 days.",
     rating: 5,
   },
   {
-    name: "Olivia T.",
+    name: "Michael T.",
     location: "Perth",
-    text: "The hand wash smells amazing and doesn't dry out my hands. Switched the whole house over.",
+    text: "We renovated our office courtyard with Terra Bloom large planters. The team couldn't believe they're not stone.",
     rating: 5,
   },
   {
-    name: "Daniel W.",
+    name: "Anita D.",
     location: "Adelaide",
-    text: "Bought the essential oil blend for my diffuser — the quality is next level. So much better than supermarket brands.",
+    text: "Love that these are recyclable. Finally a planter brand that cares about sustainability. Beautiful products too.",
     rating: 5,
   },
 ]
