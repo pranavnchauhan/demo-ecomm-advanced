@@ -8,10 +8,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 })
     }
 
-    // Log for now — integrate with GHL or email service later
+    // Log for now — integrate with a CRM or email service later
     console.log("[checkout] Abandoned cart email captured:", email, "cartId:", cartId)
 
-    // TODO: Send to GHL as contact with "abandoned_cart" tag
+    // TODO: Send to a CRM/email provider as an "abandoned_cart" contact
     // TODO: Or save to Supabase abandoned_carts table
 
     return NextResponse.json({ saved: true })

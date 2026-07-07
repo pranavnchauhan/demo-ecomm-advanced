@@ -44,7 +44,8 @@ export function SignUpForm() {
       return
     }
 
-    // Also push to GHL in the background
+    // Notify our backend in the background (no-op placeholder until a
+    // CRM/email provider is wired up)
     try {
       await fetch("/api/auth/sync", {
         method: "POST",

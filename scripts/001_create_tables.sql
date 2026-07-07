@@ -11,7 +11,6 @@ create table if not exists public.customer_profiles (
   skin_type text,
   skin_concerns text[],
   shopify_customer_id text,
-  ghl_contact_id text,
   marketing_consent boolean default false,
   created_at timestamptz default now(),
   updated_at timestamptz default now()

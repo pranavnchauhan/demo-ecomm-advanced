@@ -32,7 +32,7 @@ export async function POST(request: Request) {
   const webhooks = [
     // Starshipit — import paid orders for fulfilment
     ["orders/paid", "https://app.starshipit.com/api/webhook/shopify"],
-    // This app — sync customer data to GHL
+    // This app — process order / webhook events
     ["orders/create", `${baseUrl}/api/webhooks/shopify`],
     ["orders/paid", `${baseUrl}/api/webhooks/shopify`],
     ["checkouts/delete", `${baseUrl}/api/webhooks/shopify`],

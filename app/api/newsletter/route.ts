@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server"
-import { createContact, addContactTag } from "@/lib/ghl"
 
 export async function POST(request: Request) {
   try {
@@ -9,20 +8,9 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Email required" }, { status: 400 })
     }
 
-    // Push to GHL as newsletter subscriber
-    try {
-      const result = await createContact({
-        email,
-        tags: ["lifecycle:subscriber", "source:organic"],
-      }) as { contact?: { id: string } }
-
-      if (result?.contact?.id) {
-        await addContactTag(result.contact.id, ["newsletter-active"])
-      }
-    } catch (ghlError) {
-      console.error("GHL newsletter sync error:", ghlError)
-      // Don't fail the request if GHL is unavailable
-    }
+    // TODO: Wire this to a CRM or email provider once one is configured
+    // for this project.
+    console.log("[newsletter] Subscription received (no-op):", email)
 
     return NextResponse.json({ success: true })
   } catch {
